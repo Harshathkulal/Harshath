@@ -7,6 +7,7 @@ import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import "@mantine/core/styles.css";
 import { Inter } from "next/font/google";
 import Head from "./Head";
+import { ThemeProvider } from "@/components/theme-provider"
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -32,8 +33,13 @@ export default function RootLayout({
                 <Head />
             </head>
 
-            <body className="h-full bg-[#080809] text-neutral-50">
-
+            <body>
+            <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
                 
                     <MantineProvider>
                         <Header />
@@ -43,7 +49,7 @@ export default function RootLayout({
                         <Footer />
                     </MantineProvider>
                 
-
+                    </ThemeProvider>
             </body>
         </html>
     );

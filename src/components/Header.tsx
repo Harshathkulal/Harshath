@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import MobileNav from './MobileNav';
+// import { ModeToggle } from './ui/toggleButton';
 
 const Header = () => {
 
@@ -45,6 +46,7 @@ const Header = () => {
             </motion.div>
 
             {/* Desktop Navbar */}
+            {/* <ModeToggle/> */}
             <nav className="fixed hidden lg:flex z-[9999] top-[0.5rem] left-1/2 -translate-x-1/2 py-2 overflow-x-scroll max-w-full sm:top-[1.5rem] sm:h-12 sm:py-0 h-12 scrollbar-hide">
                 <ul className="flex items-center justify-center gap-x-4 w-[28rem] h-full">
                     {links?.map((link, index) => (
