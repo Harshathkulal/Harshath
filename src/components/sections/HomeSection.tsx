@@ -1,9 +1,9 @@
-// import AbuotMe from '../contents/AbuotMe'
+import AboutMe from '../contents/AboutMe'
 // import ContactMe from '../contents/ContactMe'
 // import CurrentFavTech from '../contents/CurrentFavTech'
 // import CurrentLearnTech from '../contents/CurrentLearnTech'
-// import Experience from '../contents/Experience'
-// import FeaturedProjects from '../contents/FeaturedProjects'
+import Experience from '../contents/Experience'
+import FeaturedProjects from '../contents/FeaturedProjects'
 import Hero from '../contents/Hero'
 // import MySkills from '../contents/MySkills'
 import SectionContainer from '../utils/SectionContainer'
@@ -14,13 +14,16 @@ const HomeSection = () => {
             <div className="flex flex-col items-start w-full">
 
                 <Hero />
+                <AboutMe />
+                <Experience />
+                <FeaturedProjects />
 
                 {/* <CurrentFavTech />
                 <CurrentLearnTech />
 
-                <AbuotMe />
+              
 
-                <Experience />
+              
 
                 <FeaturedProjects />
 
