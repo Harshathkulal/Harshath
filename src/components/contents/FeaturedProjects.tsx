@@ -8,55 +8,9 @@ import { Button } from '../ui/Button';
 import AnimationContainer from '../utils/AnimationContainer';
 import Project from '../utils/Project';
 import { Project as ProjectProps } from '../types/index';
-
+import { ProjectDetails } from '../data/ProjectData';
 // Sample data array for testing
-const gtt: ProjectProps[] = [
-    {
-        id: "1",
-        title: "Project One",
-        view: "https://example.com/project-one",
-        github: "https://github.com/projectone",
-        stack: ["React", "Node.js"],
-        description: "This is the first project.",
-        image: [{ url: "https://example.com/image1.jpg" }]
-    },
-    {
-        id: "2",
-        title: "Project Two",
-        view: "https://example.com/project-two",
-        github: "https://github.com/projecttwo",
-        stack: ["Vue", "Django"],
-        description: "This is the second project.",
-        image: [{ url: "https://example.com/image2.jpg" }]
-    },
-    {
-        id: "3",
-        title: "Project Two",
-        view: "https://example.com/project-two",
-        github: "https://github.com/projecttwo",
-        stack: ["Vue", "Django"],
-        description: "This is the second project.",
-        image: [{ url: "https://example.com/image2.jpg" }]
-    },
-    {
-        id: "4",
-        title: "Project Two",
-        view: "https://example.com/project-two",
-        github: "https://github.com/projecttwo",
-        stack: ["Vue", "Django"],
-        description: "This is the second project.",
-        image: [{ url: "https://example.com/image2.jpg" }]
-    },
-    {
-        id: "5",
-        title: "Project Two",
-        view: "https://example.com/project-two",
-        github: "https://github.com/projecttwo",
-        stack: ["Vue", "Django"],
-        description: "This is the second project.",
-        image: [{ url: "https://example.com/image2.jpg" }]
-    }
-];
+
 
 const FeaturedProjects = () => {
     const [projects, setProjects] = useState<ProjectProps[]>([]);
@@ -65,7 +19,7 @@ const FeaturedProjects = () => {
         const fetchProjects = async () => {
             try {
                 // Simulating data fetch
-                setProjects(gtt);
+                setProjects(ProjectDetails);
             } catch (error) {
                 console.log(error);
             }
