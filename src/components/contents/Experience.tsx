@@ -7,11 +7,11 @@ const Experience = () => {
             <TimeLineItem active>
                 <TimeLineItem.Title>
                     <span className="font-medium transition-all hover:text-white hover:underline hover:underline-offset-2">
-                        Frontend Developer at Polymath AI
+                        System Engineer at Tata Consultancy Services
                     </span>
                     {" "}•{" "}
                     <span className="text-neutral-200">
-                        June 2024 - Present
+                        Jan 2024 - Present
                     </span>
                 </TimeLineItem.Title>
                 <TimeLineItem.Description>
@@ -22,11 +22,11 @@ const Experience = () => {
             <TimeLineItem last>
                 <TimeLineItem.Title>
                     <span className="font-medium transition-all hover:text-white hover:underline hover:underline-offset-2">
-                        Backend Developer (Freelance) at Saman Technosys
+                    Assistant System Engineer at Tata Consultancy Services
                     </span>
                     {" "}•{" "}
                     <span className="text-neutral-200">
-                        Oct 2023 - Nov 2023
+                        Dec 2021 - Dec 2023
                     </span>
                 </TimeLineItem.Title>
                 <TimeLineItem.Description>

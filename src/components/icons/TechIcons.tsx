@@ -2,7 +2,7 @@
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/Tooltip";
 import { motion } from 'framer-motion';
-import { SiGraphql, SiNextdotjs, SiNodedotjs, SiReact, SiRedux, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiGraphql, SiNextdotjs, SiNodedotjs, SiReact, SiRedux, SiTailwindcss, SiTypescript, SiJavascript, SiGit, SiExpress, SiMongodb  } from "react-icons/si";
 
 const TechIcons = () => {
 
@@ -19,7 +19,7 @@ const TechIcons = () => {
                 transition={{ delay: 0.2 }}
                 className="mb-3 text-base text-center text-neutral-300 lg:text-start"
             >
-                My tech stack:
+                Skill tech stack:
             </motion.p>
 
             <TooltipProvider delayDuration={0}>
@@ -80,6 +80,21 @@ const TechIcons = () => {
                     >
                         <Tooltip>
                             <TooltipTrigger>
+                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#f3e960]">
+                                    <SiJavascript className="w-6 h-6" />
+                                </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                <p>Javascript</p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </motion.li>
+                    <motion.li
+                        variants={animation}
+                        className="opacity-100"
+                    >
+                        <Tooltip>
+                            <TooltipTrigger>
                                 <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#38B2AC]">
                                     <SiTailwindcss className="w-6 h-6" />
                                 </div>
@@ -116,6 +131,51 @@ const TechIcons = () => {
                             </TooltipTrigger>
                             <TooltipContent>
                                 <p>Redux</p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </motion.li>
+                    <motion.li
+                        variants={animation}
+                        className="opacity-100"
+                    >
+                        <Tooltip>
+                            <TooltipTrigger>
+                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#99877e67]">
+                                    <SiExpress  className="w-6 h-6" />
+                                </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                <p>Express</p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </motion.li>
+                    <motion.li
+                        variants={animation}
+                        className="opacity-100"
+                    >
+                        <Tooltip>
+                            <TooltipTrigger>
+                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#30772a]">
+                                    <SiMongodb  className="w-6 h-6" />
+                                </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                <p>MongoDB</p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </motion.li>
+                    <motion.li
+                        variants={animation}
+                        className="opacity-100"
+                    >
+                        <Tooltip>
+                            <TooltipTrigger>
+                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#f84d4d]">
+                                    <SiGit  className="w-6 h-6" />
+                                </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                <p>Git</p>
                             </TooltipContent>
                         </Tooltip>
                     </motion.li>

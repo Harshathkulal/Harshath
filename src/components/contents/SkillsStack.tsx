@@ -1,4 +1,4 @@
-import TechIcons from '../icons/techicons';
+import TechIcons from '../icons/TechIcons';
 import AnimationContainer from '../utils/AnimationContainer';
 
 const SkillsStack = () => {
