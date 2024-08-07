@@ -1,6 +1,6 @@
 "use client";
 
-import { links } from './lib/data';
+import { links } from '../lib/data';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Squeeze as Hamburger } from 'hamburger-react';
 import Link from 'next/link';
