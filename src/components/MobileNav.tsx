@@ -77,7 +77,7 @@ const MobileNav = () => {
                                         transition={{
                                             type: "spring",
                                             bounce: 0.15,
-                                            duration: 0.2,
+                                            duration: 0.1,
                                             delay: 0.1 * index
                                         }}
                                         onClick={() => setIsOpen(false)}
