@@ -1,27 +1,25 @@
-
-import AnimationContainer from '../utils/AnimationContainer';
-import SectionContainer from '../utils/SectionContainer';
-import ProjectCards from '../contents/ProjectCards';
+import AnimationContainer from "../utils/AnimationContainer";
+import SectionContainer from "../utils/SectionContainer";
+import ProjectCards from "../contents/ProjectCards";
 
 const ProjectSection = () => {
-    return (
-        <SectionContainer>
-            <div className="flex flex-col items-start w-full mt-0 lg:mt-8">
+  return (
+    <SectionContainer>
+      <div className="flex flex-col items-center w-full mt-0 lg:mt-8">
+        <h1 className="text-4xl md:text-5xl tracking-wide text-white !leading-[1.5] text-center font-semibold capitalize">
+          Projects
+        </h1>
 
-                
+        <AnimationContainer customClassName="w-full flex flex-col gap-5 mb-8 items-center">
+          <p className="text-base text-justify lg:text-start lg:leading-8 text-neutral-200">
+            Welcome To My Digital Playground.
+          </p>
 
-                <AnimationContainer customClassName="w-full flex flex-col gap-5 mb-8">
-                    <p className="text-base text-justify lg:text-start lg:leading-8 text-neutral-200">
-                        Welcome to my digital playground, where each project is a crafted story in code. From interactive websites to sleek mobile apps, each line serves a purpose, and every pixel has a tale to tell. Join me on this journey where innovation meets imagination, and let&apos;s turn ideas into living, breathing projects.
-                    </p>
-
-                    <ProjectCards />
-                </AnimationContainer>
-
-
-            </div>
-        </SectionContainer>
-    )
+          <ProjectCards />
+        </AnimationContainer>
+      </div>
+    </SectionContainer>
+  );
 };
 
-export default ProjectSection
+export default ProjectSection;

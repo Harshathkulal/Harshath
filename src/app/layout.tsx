@@ -25,6 +25,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      className={cn(
+        "antialiased min-h-screen transition !bg-[#080809] text-neutral-50 aeonikFont",
+        font.className
+      )}
     >
       <head>
         <ColorSchemeScript />

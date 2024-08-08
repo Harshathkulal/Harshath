@@ -9,15 +9,14 @@ import { IoDocumentText } from "react-icons/io5";
 import Link from "next/link";
 
 const Footer = () => {
-  
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/Cv.pdf';
-    link.download = 'Cv.pdf';
+    const link = document.createElement("a");
+    link.href = "/Cv.pdf";
+    link.download = "Cv.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-};
+  };
 
   return (
     <footer className="flex flex-col items-center justify-center w-full mx-auto lg:max-w-screen-md">
@@ -47,7 +46,8 @@ const Footer = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="font-normal transition ease-out text-neutral-200 hover:opacity-70" onClick={handleDownload}
+            className="font-normal transition ease-out text-neutral-200 hover:opacity-70"
+            onClick={handleDownload}
           >
             <IoDocumentText className="inline-block w-5 h-5 mr-2" />
             My CV

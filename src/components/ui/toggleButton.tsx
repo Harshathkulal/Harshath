@@ -1,18 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { MdDarkMode,MdLightMode  } from "react-icons/md";
-import { useTheme } from "next-themes"
+import * as React from "react";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { useTheme } from "next-themes";
 
-import { Button } from "./Button"
-
+import { Button } from "./Button";
 
 export function ModeToggle() {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light")
-  }
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   return (
     <Button variant="outline" size="icon" onClick={toggleTheme}>
@@ -23,5 +22,5 @@ export function ModeToggle() {
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>
-  )
+  );
 }

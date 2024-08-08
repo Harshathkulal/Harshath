@@ -1,14 +1,11 @@
 import AboutMe from "../contents/AboutMe";
 import SkillsStack from "../contents/SkillsStack";
 import ContactMe from "../contents/ContactMe";
-// import ContactMe from '../contents/ContactMe'
-
-// import CurrentLearnTech from '../contents/CurrentLearnTech'
 import Experience from "../contents/Experience";
 import FeaturedProjects from "../contents/FeaturedProjects";
 import Hero from "../contents/Hero";
-// import MySkills from '../contents/MySkills'
 import SectionContainer from "../utils/SectionContainer";
+import { InfiniteMovingCardsDemo } from "../contents/Skill";
 
 const HomeSection = () => {
   return (
@@ -19,6 +16,7 @@ const HomeSection = () => {
         <AboutMe />
         <Experience />
         <FeaturedProjects />
+        <InfiniteMovingCardsDemo />
         <ContactMe />
       </div>
     </SectionContainer>

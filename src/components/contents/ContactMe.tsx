@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  FormValidator,
-  FormValues,
-} from "../../lib/validators/form";
+import { FormValidator, FormValues } from "../../lib/validators/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import Link from "next/link";
@@ -108,21 +105,30 @@ const ContactMe = () => {
               </div>
             </Button>
           </Link>
-          <Link href="https://wa.me/qr/X3KZKVL6THKXA1" className="flex w-full ">
+          <Link
+            href="https://twitter.com/HarshathmKulal"
+            className="flex w-full "
+          >
             <Button type="button" variant="outline" className="hover:scale-100">
               <div className="text-base font-medium text-white">
                 <FaXTwitter />
               </div>
             </Button>
           </Link>
-          <Link href="https://wa.me/qr/X3KZKVL6THKXA1" className="flex w-full ">
+          <Link
+            href="https://www.instagram.com/harshath_kulal/"
+            className="flex w-full "
+          >
             <Button type="button" variant="outline" className="hover:scale-100">
               <div className="text-base font-medium text-white">
                 <FaInstagram />
               </div>
             </Button>
           </Link>
-          <Link href="https://wa.me/qr/X3KZKVL6THKXA1" className="flex w-full ">
+          <Link
+            href="https://www.linkedin.com/in/harshath-kulal-ba078b209/"
+            className="flex w-full "
+          >
             <Button type="button" variant="outline" className="hover:scale-100">
               <div className="text-base font-medium text-white">
                 <SiLinkedin />

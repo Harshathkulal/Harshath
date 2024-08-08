@@ -5,7 +5,7 @@ import { TbExternalLink } from "react-icons/tb";
 import { Button } from "../ui/Button";
 import AnimationContainer from "./AnimationContainer";
 import { BackgroundGradient } from "./background-gradient";
-import Image from 'next/image';
+import Image from "next/image";
 
 interface Props {
   project: ProjectProps;
@@ -33,9 +33,8 @@ const Project = ({ project }: Props) => {
   };
 
   return (
-    
-      <AnimationContainer customClassName="bg-[#080809] border border-border/50 w-full hover:border-neutral-800 rounded-xl">
-        <BackgroundGradient containerClassName="">
+    <AnimationContainer customClassName="bg-[#080809] border border-border/50 w-full hover:border-neutral-800 rounded-xl">
+      <BackgroundGradient containerClassName="">
         <div className="flex-col items-start p-4 h-full flex lg:p-5">
           <Image
             src={project.image[0].url}
@@ -64,9 +63,8 @@ const Project = ({ project }: Props) => {
             </Link>
           </div>
         </div>
-        </BackgroundGradient>
-      </AnimationContainer>
-    
+      </BackgroundGradient>
+    </AnimationContainer>
   );
 };
 

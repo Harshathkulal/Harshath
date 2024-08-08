@@ -1,7 +1,7 @@
-import Loader  from '../components/ui/Loader';
+import Loader from "../components/ui/Loader";
 
 const Loading = () => {
-    return <Loader />;
+  return <Loader />;
 };
 
-export default Loading
+export default Loading;
