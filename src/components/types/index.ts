@@ -17,9 +17,7 @@ export interface Project {
   github: string;
   view: string;
   stack?: string[];
-  image: {
-    url: string;
-  }[];
+  image: string;
 }
 
 export interface AboutProps {

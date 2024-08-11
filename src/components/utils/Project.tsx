@@ -37,11 +37,12 @@ const Project = ({ project }: Props) => {
       <BackgroundGradient containerClassName="">
         <div className="flex-col items-start p-4 h-full flex lg:p-5">
           <Image
-            src={project.image[0].url}
+            src={project.image}
             alt="Landscape picture"
-            width={500}
-            height={500}
+            width={600}
+            height={600}
           />
+
           <h4 className="text-lg font-medium text-neutral-100">
             {project?.title}
           </h4>
