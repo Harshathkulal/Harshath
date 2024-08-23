@@ -27,6 +27,8 @@ const Head = () => {
       <meta content={meta.description} name="description" />
       <meta name="keywords" content={meta.keywords} />
       <meta property="og:url" content={`${pathname}`} />
+      <link rel="icon" href="/images/icon.svg" />
+      <link rel="icon" href="/images/Harshath.ico" />
       <link rel="canonical" href={`${pathname}`} />
       <link rel="me" href="mailto:harshathmkulal@gmail.com" />
       <meta property="og:type" content={meta.type} />
