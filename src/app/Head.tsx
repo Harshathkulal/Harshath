@@ -26,10 +26,13 @@ const Head = () => {
       <meta name="robots" content="follow, index" />
       <meta content={meta.description} name="description" />
       <meta name="keywords" content={meta.keywords} />
-      <meta property="og:url" content={`${pathname}`} />
+      <meta
+        property="og:url"
+        content={`https://harshath.vercel.app/${pathname}`}
+      />
+      <link rel="canonical" href={`https://harshath.vercel.app/${pathname}`} />
       <link rel="icon" href="/images/icon.svg" />
-      <link rel="icon" href="/images/Harshath.ico" />
-      <link rel="canonical" href={`${pathname}`} />
+      {/* <link rel="icon" href="/images/Harshath.ico" /> */}
       <link rel="me" href="mailto:harshathmkulal@gmail.com" />
       <meta property="og:type" content={meta.type} />
       <meta property="og:site_name" content="Harshath Kulal" />

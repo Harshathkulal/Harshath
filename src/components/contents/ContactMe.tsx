@@ -2,7 +2,6 @@
 
 import { FormValidator, FormValues } from "../../lib/validators/form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
 import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -19,7 +18,6 @@ import SendButton from "../ui/SendButton";
 import { Textarea } from "../ui/Textarea";
 import AnimationContainer from "../utils/AnimationContainer";
 import { cn } from "@/lib/utils";
-// import axios, { AxiosError } from 'axios';
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 import { SiWhatsapp } from "react-icons/si";
@@ -41,38 +39,42 @@ const ContactMe = () => {
   });
 
   const [isSent, setIsSent] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const { mutate: handleSubmit, isPending: isLoading } = useMutation({
-    mutationFn: async ({ name, email, phone, message }: FormValues) => {
-      const payload: FormValues = {
-        name,
-        email,
-        phone,
-        message,
-      };
-
-      // const { data } = await axios.post('/api/contact', payload);
-
-      //return data;
-    },
-    // onError: (error) => {
-    //     if (error instanceof AxiosError) {
-    //         console.error(error.message);
-    //         toast("Something went wrong!", {
-    //             description: "Unable to send message, please try again.",
-    //         });
-    //     }
-    // },
-    onSuccess: () => {
-      form.reset();
-      setTimeout(() => {
-        setIsSent(true);
-      }, 1000);
-      toast("Your message has been received!", {
-        description: "I got your message, I will get back to you soon!",
+  const onSubmit = async (data: FormValues) => {
+    setIsLoading(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
-    },
-  });
+
+      if (response.ok) {
+        form.reset();
+        setTimeout(() => {
+          setIsSent(true);
+        }, 1000);
+        toast("Your message has been received!", {
+          description: "I got your message, I will get back to you soon!",
+        });
+      } else {
+        const errorData = await response.json();
+        toast("Something went wrong!", {
+          description:
+            errorData.errors || "Unable to send message, please try again.",
+        });
+      }
+    } catch (error) {
+      toast("Something went wrong!", {
+        description: "Unable to send message, please try again.",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <AnimationContainer customClassName="w-full py-12 lg:py-16">
@@ -105,10 +107,7 @@ const ContactMe = () => {
               </div>
             </Button>
           </Link>
-          <Link
-            href="https://twitter.com/HarshathmKulal"
-            className="flex w-full "
-          >
+          <Link href="https://x.com/Hxrshxth_K" className="flex w-full ">
             <Button type="button" variant="outline" className="hover:scale-100">
               <div className="text-base font-medium text-white">
                 <FaXTwitter />
@@ -139,7 +138,7 @@ const ContactMe = () => {
 
         <Form {...form}>
           <form
-            onSubmit={form.handleSubmit((e) => handleSubmit(e))}
+            onSubmit={form.handleSubmit(onSubmit)}
             className="flex flex-col items-center justify-center w-full space-y-5 text-white"
           >
             <FormField
