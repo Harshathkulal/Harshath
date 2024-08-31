@@ -59,7 +59,7 @@ const Project = ({ project }: Props) => {
             <Link href={project.view} target="_blank">
               <Button variant="outline" size="sm">
                 <TbExternalLink className="w-5 h-5" />
-                <span className="ml-2">View</span>
+                <span className="ml-2">Live</span>
               </Button>
             </Link>
           </div>
