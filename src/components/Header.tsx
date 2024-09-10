@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import MobileNav from "./MobileNav";
+import {MobileNav} from "./MobileNav";
 // import { ModeToggle } from './ui/toggleButton';
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
   const isBlogActive = pathname?.startsWith("/blog");
 
   return (
-    <header className="z-[99999] relative">
+    <header className="z-[9999] relative">
       {/* Navbar Background */}
       <motion.div
         initial={{ y: -100, opacity: 0, x: "-50%" }}
