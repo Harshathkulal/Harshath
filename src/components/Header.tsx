@@ -4,17 +4,22 @@ import { links } from "../lib/data";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
-import {MobileNav} from "./MobileNav";
-// import { ModeToggle } from './ui/toggleButton';
+import { useState, useEffect } from "react";
+import { MobileNav } from "./MobileNav";
+import { usePathname } from "next/navigation"; // Import usePathname
 
 const Header = () => {
-  const pathname = usePathname();
-
+  const pathname = usePathname(); // Get the current path
   const [activeLink, setActiveLink] = useState("Home");
 
-  const isBlogActive = pathname?.startsWith("/blog");
+  // Use useEffect to update the active link based on pathname
+  useEffect(() => {
+    if (pathname.includes("projects")) {
+      setActiveLink("Projects");
+    } else if (pathname === "/") {
+      setActiveLink("Home");
+    }
+  }, [pathname]);
 
   return (
     <header className="z-[9999] relative">
@@ -44,7 +49,6 @@ const Header = () => {
       </motion.div>
 
       {/* Desktop Navbar */}
-      {/* <ModeToggle/> */}
       <nav className="fixed hidden lg:flex z-[9999] top-[0.5rem] left-1/2 -translate-x-1/2 py-2 overflow-x-scroll max-w-full sm:top-[1.5rem] sm:h-12 sm:py-0 h-12 scrollbar-hide">
         <ul className="flex items-center justify-center gap-x-4 w-[28rem] h-full">
           {links?.map((link, index) => (
@@ -65,15 +69,12 @@ const Header = () => {
                 onClick={() => setActiveLink(link.name)}
                 className={cn(
                   "flex items-center justify-center px-4 py-2 transition hover:text-white",
-                  (activeLink === link.name ||
-                    (isBlogActive && link.name === "Blog")) &&
-                    "text-white"
+                  activeLink === link.name && "text-white"
                 )}
               >
                 {link.name}
 
-                {(activeLink === link.name ||
-                  (isBlogActive && link.name === "Blog")) && (
+                {activeLink === link.name && (
                   <motion.span
                     layoutId="activeLink"
                     transition={{
@@ -96,3 +97,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

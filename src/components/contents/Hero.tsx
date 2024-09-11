@@ -1,10 +1,14 @@
 import Image from "next/image";
 import AnimationContainer from "../utils/AnimationContainer";
+import { Beam, Beam2 } from "@/components/beam";
 
 const Hero = () => {
   return (
     <div className="relative flex flex-col-reverse items-center justify-between w-full py-6 lg:py-16 lg:flex-row">
       <AnimationContainer customClassName="flex flex-col items-center justify-between max-w-lg lg:items-start p-0 lg:pr-8">
+        <Beam />
+        <Beam2 />
+
         <h3 className="text-sm lg:text-xl text-white/80">
           Greetings, Code Craftsman <span className="text-white">🚀</span>
         </h3>
