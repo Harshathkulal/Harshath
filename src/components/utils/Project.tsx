@@ -35,25 +35,25 @@ const Project = ({ project }: Props) => {
   return (
     <AnimationContainer customClassName="bg-[#080809] border border-border/50 w-full hover:border-neutral-800 rounded-xl">
       <BackgroundGradient containerClassName="">
-        <div className="flex-col items-start p-4 h-full flex lg:p-5">
+        <div className="flex flex-col items-start p-4 h-full lg:p-5">
           <Image
             src={project.image}
-            alt="Landscape picture"
+            alt={`${project.title} project screenshot`}
             width={600}
             height={600}
           />
 
-          <h4 className="text-lg font-medium text-neutral-100">
-            {project?.title}
+          <h4 className="mt-4 text-lg font-medium text-neutral-100">
+            {project.title}
           </h4>
           <p className="mt-4 text-sm text-neutral-300 flex-1">
-            {truncateDescription(project?.description)}
+            {truncateDescription(project.description)}
           </p>
           <div className="flex items-start w-full gap-4 mt-4">
             <Link href={project.github} target="_blank">
               <Button variant="outline" size="sm">
                 <SiGithub className="w-5 h-5" />
-                <span className="ml-2">Github</span>
+                <span className="ml-2">GitHub</span>
               </Button>
             </Link>
             <Link href={project.view} target="_blank">

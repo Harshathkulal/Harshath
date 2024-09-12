@@ -54,9 +54,7 @@ const ContactMe = () => {
 
       if (response.ok) {
         form.reset();
-        setTimeout(() => {
-          setIsSent(true);
-        }, 1000);
+        setIsSent(true);
         toast("Your message has been received!", {
           description: "I got your message, I will get back to you soon!",
         });

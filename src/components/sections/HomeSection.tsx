@@ -5,7 +5,7 @@ import Experience from "../contents/Experience";
 import FeaturedProjects from "../contents/FeaturedProjects";
 import Hero from "../contents/Hero";
 import SectionContainer from "../utils/SectionContainer";
-import { InfiniteMovingCardsDemo } from "../contents/Skill";
+import InfiniteMovingCardsDemo from "../contents/Skill";
 
 const HomeSection = () => {
   return (

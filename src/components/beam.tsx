@@ -1,5 +1,5 @@
-'use client';
-import { motion } from 'framer-motion';
+"use client";
+import { motion } from "framer-motion";
 
 export const Beam = () => {
   return (
@@ -20,16 +20,16 @@ export const Beam = () => {
         <motion.linearGradient
           variants={{
             initial: {
-              x1: '40%',
-              x2: '50%',
-              y1: '160%',
-              y2: '180%',
+              x1: "40%",
+              x2: "50%",
+              y1: "160%",
+              y2: "180%",
             },
             animate: {
-              x1: '0%',
-              x2: '10%',
-              y1: '-40%',
-              y2: '-20%',
+              x1: "0%",
+              x2: "10%",
+              y1: "-40%",
+              y2: "-20%",
             },
           }}
           animate="animate"
@@ -37,8 +37,8 @@ export const Beam = () => {
           transition={{
             duration: 1.8,
             repeat: Infinity,
-            repeatType: 'loop',
-            ease: 'linear',
+            repeatType: "loop",
+            ease: "linear",
             repeatDelay: 2,
           }}
           id="grad1"
@@ -52,6 +52,7 @@ export const Beam = () => {
     </svg>
   );
 };
+
 export const Beam2 = () => {
   return (
     <svg
@@ -71,16 +72,16 @@ export const Beam2 = () => {
         <motion.linearGradient
           variants={{
             initial: {
-              x1: '40%',
-              x2: '50%',
-              y1: '160%',
-              y2: '180%',
+              x1: "40%",
+              x2: "50%",
+              y1: "160%",
+              y2: "180%",
             },
             animate: {
-              x1: '0%',
-              x2: '10%',
-              y1: '-40%',
-              y2: '-20%',
+              x1: "0%",
+              x2: "10%",
+              y1: "-40%",
+              y2: "-20%",
             },
           }}
           animate="animate"
@@ -88,8 +89,8 @@ export const Beam2 = () => {
           transition={{
             duration: 2.8,
             repeat: Infinity,
-            repeatType: 'loop',
-            ease: 'linear',
+            repeatType: "loop",
+            ease: "linear",
             repeatDelay: 1,
           }}
           id="grad1"

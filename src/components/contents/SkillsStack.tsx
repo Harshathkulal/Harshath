@@ -1,5 +1,6 @@
-import TechIcons from "../icons/TechIcons";
+import React, { lazy, memo } from "react";
 import AnimationContainer from "../utils/AnimationContainer";
+const TechIcons = lazy(() => import("../icons/TechIcons"));
 
 const SkillsStack = () => {
   return (
@@ -11,4 +12,5 @@ const SkillsStack = () => {
   );
 };
 
-export default SkillsStack;
+export default memo(SkillsStack);
+

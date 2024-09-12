@@ -1,17 +1,10 @@
 "use client";
 
-// import { getAbout } from '@/graphql';
-import { AboutProps } from "../types/index";
-import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
 import Experience from "../contents/Experience";
 import AnimationContainer from "../utils/AnimationContainer";
 import SectionContainer from "../utils/SectionContainer";
 
 const AboutSection = () => {
-  const [about, setAbout] = useState<AboutProps[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-
   return (
     <SectionContainer>
       <div className="flex flex-col items-center w-full mt-0 lg:mt-8">
@@ -29,47 +22,13 @@ const AboutSection = () => {
               </h2>
             </div>
             <div className="w-full mb-8 space-y-5">
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  type: "spring",
-                  bounce: 0.25,
-                  delay: 0.2,
-                }}
-                className="text-base leading-8 text-neutral-200"
-              >
-                Looking ahead, I&apos;m excited about creating Responsive
-                Industry Ready,Productive websites. I want to make online spaces
-                that feel more real and fun for users.
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  type: "spring",
-                  bounce: 0.25,
-                  delay: 0.3,
-                }}
-                className="text-base leading-8 text-neutral-200"
-              >
-                I&apos;m also curious about Knowledge Sharing with new people .
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  type: "spring",
-                  bounce: 0.25,
-                  delay: 0.4,
-                }}
-                className="text-base leading-8 text-neutral-200"
-              >
-                As part of my coding adventure, I hope to join others in
-                creating cool projects together. I want to be a part of the
-                worldwide community of developers, learn lots, and bring some
-                exciting ideas to life.
-              </motion.p>
+              Looking ahead, I&apos;m excited about creating Responsive Industry
+              Ready,Productive websites. I want to make online spaces that feel
+              more real and fun for users. I&apos;m also curious about Knowledge
+              Sharing with new people . As part of my coding adventure, I hope
+              to join others in creating cool projects together. I want to be a
+              part of the worldwide community of developers, learn lots, and
+              bring some exciting ideas to life.
             </div>
           </AnimationContainer>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { IoArrowForward } from "react-icons/io5";
@@ -10,20 +10,8 @@ import Project from "../utils/Project";
 import { Project as ProjectProps } from "../types/index";
 import { ProjectDetails } from "../data/ProjectData";
 
-const FeaturedProjects = () => {
-  const [projects, setProjects] = useState<ProjectProps[]>([]);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        // Simulating data fetch
-        setProjects(ProjectDetails);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchProjects();
-  }, []);
+const FeaturedProjects: React.FC = () => {
+  const [projects, setProjects] = useState<ProjectProps[]>(ProjectDetails);
 
   return (
     <AnimationContainer customClassName="w-full py-12 lg:py-16 relative">
