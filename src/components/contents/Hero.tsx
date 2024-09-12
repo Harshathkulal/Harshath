@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <div className="relative flex flex-col-reverse items-center justify-between w-full py-6 lg:py-16 lg:flex-row">
       <AnimationContainer customClassName="flex flex-col items-center justify-between max-w-lg lg:items-start p-0 lg:pr-8">
-        <Suspense fallback={<div />}>
+        <Suspense fallback={<div/>}>
           <Beam />
           <Beam2 />
         </Suspense>

@@ -7,6 +7,7 @@ import "./globals.css";
 import "@mantine/core/styles.css";
 import Head from "./head";
 import Providers from "@/components/utils/Providers";
+import { Analytics } from "@vercel/analytics/react";
 
 const font = Inter({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
     >
       <Head />
       <body className="h-full bg-[#080809] text-neutral-50">
+        <Analytics />
         <Providers>
           <MantineProvider>
             <Header />
