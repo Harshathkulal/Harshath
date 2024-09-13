@@ -1,24 +1,23 @@
 "use client";
 
-import { FormValidator, FormValues } from "../../lib/validators/form";
+import { FormValidator, FormValues } from "@/lib/validators/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Button } from "../ui/Button";
+import { Button } from "@/components/ui/Button";
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormMessage,
-} from "../ui/form";
-import { Input } from "../ui/Input";
-import SendButton from "../ui/SendButton";
-import { Textarea } from "../ui/Textarea";
-import AnimationContainer from "../utils/AnimationContainer";
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/Input";
+import SendButton from "@/components/ui/SendButton";
+import { Textarea } from "@/components/ui/Textarea";
+import AnimationContainer from "@/components/utils/AnimationContainer";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 import { toast } from "sonner";
 import { SiWhatsapp } from "react-icons/si";
 import { BiLogoGmail } from "react-icons/bi";
@@ -155,14 +154,8 @@ const ContactMe = () => {
                     />
                   </FormControl>
                   <FormMessage>
-                    <motion.span
-                      initial={{ opacity: 0, y: 0 }}
-                      animate={{ opacity: 1, y: 1 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      {form.formState.errors.name &&
-                        form.formState.errors.name.message}
-                    </motion.span>
+                    {form.formState.errors.name &&
+                      form.formState.errors.name.message}
                   </FormMessage>
                 </FormItem>
               )}
@@ -191,14 +184,8 @@ const ContactMe = () => {
                       />
                     </FormControl>
                     <FormMessage>
-                      <motion.span
-                        initial={{ opacity: 0, y: 0 }}
-                        animate={{ opacity: 1, y: 1 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        {form.formState.errors.email &&
-                          form.formState.errors.email.message}
-                      </motion.span>
+                      {form.formState.errors.email &&
+                        form.formState.errors.email.message}
                     </FormMessage>
                   </FormItem>
                 )}
@@ -226,14 +213,8 @@ const ContactMe = () => {
                       />
                     </FormControl>
                     <FormMessage>
-                      <motion.span
-                        initial={{ opacity: 0, y: 0 }}
-                        animate={{ opacity: 1, y: 1 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        {form.formState.errors.phone &&
-                          form.formState.errors.phone.message}
-                      </motion.span>
+                      {form.formState.errors.phone &&
+                        form.formState.errors.phone.message}
                     </FormMessage>
                   </FormItem>
                 )}
@@ -257,14 +238,8 @@ const ContactMe = () => {
                     />
                   </FormControl>
                   <FormMessage>
-                    <motion.span
-                      initial={{ opacity: 0, y: 0 }}
-                      animate={{ opacity: 1, y: 1 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      {form.formState.errors.message &&
-                        form.formState.errors.message.message}
-                    </motion.span>
+                    {form.formState.errors.message &&
+                      form.formState.errors.message.message}
                   </FormMessage>
                 </FormItem>
               )}

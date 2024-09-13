@@ -1,17 +1,17 @@
-import { Project as ProjectProps } from "../types/index";
+import { Project as ProjectProps } from "@/components/types/index";
 import Link from "next/link";
 import { SiGithub } from "react-icons/si";
 import { TbExternalLink } from "react-icons/tb";
-import { Button } from "../ui/Button";
-import AnimationContainer from "./AnimationContainer";
-import { BackgroundGradient } from "./background-gradient";
+import { Button } from "./ui/Button";
+import AnimationContainer from "./utils/AnimationContainer";
+import { BackgroundGradient } from "@/components/utils/background-gradient";
 import Image from "next/image";
 
 interface Props {
   project: ProjectProps;
 }
 
-const Project = ({ project }: Props) => {
+const ProjectCard = ({ project }: Props) => {
   const truncateDescription = (description: string) => {
     const firstFullStopIndex = description.indexOf(".");
     const firstExclamationIndex = description.indexOf("!");
@@ -69,4 +69,4 @@ const Project = ({ project }: Props) => {
   );
 };
 
-export default Project;
+export default ProjectCard;

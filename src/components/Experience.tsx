@@ -1,5 +1,5 @@
 import React from "react";
-import { TimeLine, TimeLineItem } from "../utils/ExpTimeLine";
+import { TimeLine, TimeLineItem } from "@/components/utils/ExpTimeLine";
 
 const Experience = () => {
   return (

@@ -2,7 +2,7 @@
 
 import { links } from "@/lib/data";
 import { AnimatePresence, motion } from "framer-motion";
-import { Squeeze as Hamburger } from "hamburger-react";
+import { Spin as Hamburger } from 'hamburger-react'
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
@@ -37,7 +37,6 @@ const MobileNav = () => {
             height={30}
             width={30}
             priority
-           
           />
         </Link>
 

@@ -1,6 +1,5 @@
-import React, { lazy, memo } from "react";
-import AnimationContainer from "../utils/AnimationContainer";
-const TechIcons = lazy(() => import("../icons/TechIcons"));
+import TechIcons from "@/components/icons/TechIcons";
+import AnimationContainer from "@/components/utils/AnimationContainer";
 
 const SkillsStack = () => {
   return (
@@ -12,5 +11,4 @@ const SkillsStack = () => {
   );
 };
 
-export default memo(SkillsStack);
-
+export default SkillsStack;

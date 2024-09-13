@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center justify-center w-full mx-auto lg:max-w-screen-md">
+    <footer className="flex flex-col items-center justify-center w-full mx-auto lg:max-w-screen-md pb-4">
       <hr className="w-full h-px border border-neutral-900" />
       <AnimationContainer customClassName="w-full grid grid-cols-3 place-items-center gap-2 lg:gap-4 mx-4 py-12 lg:py-8">
         <Link href="/">
@@ -48,7 +48,7 @@ const Footer = () => {
           </Button>
         </Link>
       </AnimationContainer>
-      <p className="text-sm text-slate-400">
+      <p className="text-sm text-slate-400 ">
         Copyright © 2024 Harshath | All rights reserved
       </p>
     </footer>

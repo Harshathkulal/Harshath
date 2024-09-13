@@ -1,5 +1,5 @@
 import React from "react";
-import AnimationContainer from "../utils/AnimationContainer";
+import AnimationContainer from "./utils/AnimationContainer";
 
 const AboutMe = () => {
   return (
