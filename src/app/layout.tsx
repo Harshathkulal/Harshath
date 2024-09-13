@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import { MantineProvider } from "@mantine/core";
 import "./globals.css";
 import "@mantine/core/styles.css";
-import Head from "./head";
+import Head from "./Head";
 import Providers from "@/components/utils/Providers";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -30,7 +30,9 @@ export default function RootLayout({
       lang="en"
       className={`antialiased min-h-screen transition !bg-[#080809] text-neutral-50 ${font.className}`}
     >
+      <head>
       <Head />
+      </head>
       <body className="h-full bg-[#080809] text-neutral-50">
         <Analytics />
         <Providers>
