@@ -42,7 +42,7 @@ const GradientBackground = ({ children }: { children: React.ReactNode }) => {
           viewport={{ once: false }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
           animate={controls}
-          className="bg-sky-500/30 z-[15] w-[30rem] left-[45%] top-[5rem] absolute h-[18rem] blur-[11rem] rounded-full flex"
+          className="bg-sky-500/30 z-[15] w-[30rem] left-[45%] top-[5rem] absolute h-[18rem] blur-[11rem] rounded-full hidden lg:flex"
         />
         <motion.div
           initial={{ opacity: 0 }}
@@ -50,7 +50,7 @@ const GradientBackground = ({ children }: { children: React.ReactNode }) => {
           viewport={{ once: false }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
           animate={controls}
-          className="bg-violet-500/30 z-[15] absolute w-[30rem] right-[45%] top-[5rem] h-[18rem] mt-[5rem] blur-[11rem] rounded-full flex"
+          className="bg-violet-500/30 z-[15] absolute w-[30rem] right-[45%] top-[5rem] h-[18rem] mt-[5rem] blur-[11rem] rounded-full hidden lg:flex"
         />
 
         {children}

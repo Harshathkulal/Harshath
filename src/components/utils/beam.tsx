@@ -9,7 +9,7 @@ export const Beam = () => {
       viewBox="0 0 156 63"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute top-[70px] md:-left-[5px] -left-10 ml-60 mt-8"
+      className="absolute top-[0px] md:left-[200px] -left-12 ml-48  mt-5 lg:top-[100px]"
     >
       <path
         d="M40 1h40M0 1h40m40 60h40m-1 0h40m-1 40h40M80 90V0m80 80V40"
@@ -35,11 +35,11 @@ export const Beam = () => {
           animate="animate"
           initial="initial"
           transition={{
-            duration: 1.8,
+            duration: 1.6,
             repeat: Infinity,
             repeatType: "loop",
             ease: "linear",
-            repeatDelay: 2,
+            repeatDelay: 1,
           }}
           id="grad1"
         >
@@ -61,7 +61,7 @@ export const Beam2 = () => {
       viewBox="0 0 156 63"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute bottom-[69px]  md:left-[600px] -left-60 ml-60 mt-8 rotate-180"
+      className="absolute bottom-[150px]  md:left-[500px] -left-60 ml-60 mt-8 rotate-180"
     >
       <path
         d="M40 1h40M0 1h40m40 60h40m-1 0h40m-1 40h40M80 90V0m80 80V40"
@@ -87,7 +87,7 @@ export const Beam2 = () => {
           animate="animate"
           initial="initial"
           transition={{
-            duration: 2.8,
+            duration: 2,
             repeat: Infinity,
             repeatType: "loop",
             ease: "linear",

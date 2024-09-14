@@ -23,7 +23,17 @@ const Header = () => {
   return (
     <header className="z-[9999] relative">
       {/* Desktop Navbar */}
-      <div className="fixed top-0 -translate-x-1/2 w-full h-16 bg-black/20 border border-neutral-800/50 rounded-none shadow-lg left-1/2 bg-opacity-80 shadow-black/50 backdrop-blur-md sm:top-6 sm:h-12 sm:w-[28rem] sm:rounded-full mx-auto hidden lg:inline-block"></div>
+      <motion.div
+        initial={{ y: -100, opacity: 0, x: "-50%" }}
+        animate={{ y: 0, opacity: 1, x: "-50%" }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 20,
+          duration: 0.7,
+        }}
+        className="fixed top-0 -translate-x-1/2 w-full h-16 bg-black/20 border border-neutral-800/50 rounded-none shadow-lg left-1/2 bg-opacity-80 shadow-black/50 backdrop-blur-md sm:top-6 sm:h-12 sm:w-[28rem] sm:rounded-full mx-auto overflow-hidden hidden lg:inline-block"
+      ></motion.div>
       <nav className="fixed hidden lg:flex z-[9999] top-[0.5rem] left-1/2 -translate-x-1/2 py-2 overflow-x-scroll max-w-full sm:top-[1.5rem] sm:h-12 sm:py-0 h-12 scrollbar-hide">
         <ul className="flex items-center justify-center gap-x-4 w-[28rem] h-full">
           {links?.map((link, index) => (

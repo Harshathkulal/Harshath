@@ -33,6 +33,8 @@ const Hero = () => {
           className="object-cover object-top w-32 h-32 transition duration-300 ease-out rounded-full filter grayscale hover:grayscale-0 lg:w-40 lg:h-40"
           priority
         />
+        <div className="absolute block w-36 h-36 rounded-full md:hidden top-2 left-0 right-1/2 -z-10 bg-sky-500/30 blur-[5rem]"></div>
+        <div className="absolute block w-36 h-36 rounded-full md:hidden top-2 left-1/2 right-0 -z-10 bg-sky-500/30 blur-[5rem]"></div>
       </AnimationContainer>
     </>
   );
